@@ -1,0 +1,44 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+<p>title</p>
+<%= f.text_field :title %>
+</div>
+
+<div class="field">
+<p>body</p>
+<%= f.text_area :body %>
+</div>
+
+
+<div class="field">
+<p>latitude</p>
+<%= f.text_field :latitude %>
+</div>
+
+
+<div class="field">
+<p>longitude</p>
+<%= f.text_field :longitude %>
+</div>
+
+<div class="field">
+<p>user</p>
+<%= f.collection_select :user_id, User.all, :id, :name %>
+</div>
+
+<div class="actions">
+<%= f.submit %>
+</div>
+<% end %>	

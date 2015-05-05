@@ -1,0 +1,27 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<table>
+<tr>
+<td>Disease</td>
+<td>Comments</td>
+<td>Latitude</td>
+<td>Longitude</td>
+<td>User</td>
+</tr>
+<% @posts.each do |post| %>
+<tr>
+	<td><%= link_to post.title, post_path(post) %></td>
+	<td><%= post.body %></td>
+	<td><%= post.latitude %></td>
+	<td><%= post.longitude %></td>
+	<td><%= post.user.name %></td>
+	<td><%= link_to "edit post", edit_post_path(post.id) %> </td>
+	<td><%= link_to "destroy post", post, method: :delete %> </td>
+
+</tr>
+<% end %>
+</table>
+
+<br>
+<%= link_to 'New Post', new_post_path %>

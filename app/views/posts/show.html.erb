@@ -1,0 +1,11 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<div>
+<h2><%= @post.title %></h2>
+<p><%= @post.body %></p>
+<p><%= @post.latitude %></p>
+<p><%= @post.longitude %></p>
+<p><%= @post.user.name %></p>
+</div>
+<%= link_to 'Back', posts_path %>

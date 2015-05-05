@@ -1,0 +1,8 @@
+The three validations included were: uniqueness, length, and presence. These were all located in the posts page.
+
+We added Papertrail as a Heroku add-on.
+
+For the queries, we created two queries: sorting descending by name, and displaying the most 3 recent posts Another two queries were created for a second list of posts: displaying posts with a latitude of 39.95 and hacing an offset.
+
+The deployment location for posts is: https://cis196-jz-hq.herokuapp.com/
+	
