@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
 	has_many :posts, :dependent => :destroy
 	has_many :comments, :dependent => :destroy
+	validates :password, confirmation: true
 end

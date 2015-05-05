@@ -12,32 +12,33 @@
   <% end %>
 
 <div class="field">
-<p>title</p>
+<p>Disease</p>
 <%= f.text_field :title %>
 </div>
 
 <div class="field">
-<p>body</p>
+<p>Comments</p>
 <%= f.text_area :body %>
 </div>
 
 
 <div class="field">
-<p>latitude</p>
+<p>Latitude</p>
 <%= f.text_field :latitude %>
 </div>
 
 
 <div class="field">
-<p>longitude</p>
+<p>Longitude</p>
 <%= f.text_field :longitude %>
 </div>
 
 <div class="field">
-<p>user</p>
+<p>User</p>
 <%= f.collection_select :user_id, User.all, :id, :name %>
 </div>
 
+<br>
 <div class="actions">
 <%= f.submit %>
 </div>

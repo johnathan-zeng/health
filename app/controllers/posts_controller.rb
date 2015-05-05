@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
   	@posts = Post.all
+  	@posts2 = Post.where(latitude: '39.95').all
+  	@posts3 = Post.where(latitude: '40.71').all
   end
 
   def new

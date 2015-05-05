@@ -3,11 +3,11 @@
 
 <table>
 <tr>
-<td>Disease</td>
-<td>Comments</td>
-<td>Latitude</td>
-<td>Longitude</td>
-<td>User</td>
+<th>Disease</th>
+<th>Comments</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>User</th>
 </tr>
 <% @posts.each do |post| %>
 <tr>
@@ -16,8 +16,54 @@
 	<td><%= post.latitude %></td>
 	<td><%= post.longitude %></td>
 	<td><%= post.user.name %></td>
-	<td><%= link_to "edit post", edit_post_path(post.id) %> </td>
-	<td><%= link_to "destroy post", post, method: :delete %> </td>
+	<td><%= link_to "edit", edit_post_path(post.id) %> </td>
+	<td><%= link_to "destroy", post, method: :delete %> </td>
+
+</tr>
+<% end %>
+</table>
+<h2> Posts in Philadelphia </h2>
+
+<table>
+<tr>
+<th>Disease</th>
+<th>Comments</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>User</th>
+</tr>
+<% @posts2.each do |post| %>
+<tr>
+	<td><%= link_to post.title, post_path(post) %></td>
+	<td><%= post.body %></td>
+	<td><%= post.latitude %></td>
+	<td><%= post.longitude %></td>
+	<td><%= post.user.name %></td>
+	<td><%= link_to "edit", edit_post_path(post.id) %> </td>
+	<td><%= link_to "destroy", post, method: :delete %> </td>
+
+</tr>
+<% end %>
+</table>
+<h2> Posts in New York City </h2>
+
+<table>
+<tr>
+<th>Disease</th>
+<th>Comments</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>User</th>
+</tr>
+<% @posts3.each do |post| %>
+<tr>
+	<td><%= link_to post.title, post_path(post) %></td>
+	<td><%= post.body %></td>
+	<td><%= post.latitude %></td>
+	<td><%= post.longitude %></td>
+	<td><%= post.user.name %></td>
+	<td><%= link_to "edit", edit_post_path(post.id) %> </td>
+	<td><%= link_to "destroy", post, method: :delete %> </td>
 
 </tr>
 <% end %>
