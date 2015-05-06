@@ -2,8 +2,29 @@
 <p>Find me in app/views/posts/users.html.erb</p>
 
 <div>
-<h2><%= @user.name %></h2>
 <p><%= @user.email %></p>
 <p><%= @user.password %></p>
 </div>
+
+<table>
+<tr>
+<th>Disease</th>
+<th>Comments</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>User</th>
+</tr>
+<% @posts.each do |post| %>
+<tr>
+	<td><%= link_to post.title, post %></td>
+	<td><%= post.body %></td>
+	<td><%= post.latitude %></td>
+	<td><%= post.longitude %></td>
+	<td><%= link_to "edit", edit_post_path(post) %> </td>
+	<td><%= link_to "destroy", post, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+
+</tr>
+<% end %>
+</table>
+
 <%= link_to 'Back', users_path %>

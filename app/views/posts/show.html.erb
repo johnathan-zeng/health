@@ -1,4 +1,4 @@
-<h1>Users#show</h1>
+<h1>Posts#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
 <div>
@@ -6,7 +6,7 @@
 <p><%= @post.body %></p>
 <p><%= @post.latitude %></p>
 <p><%= @post.longitude %></p>
-<p><%= @post.user.name %></p>
+<p><%= @post.user.email %></p>
 </div>
 <%= link_to 'edit', edit_post_path %>
 <%= link_to 'back', posts_path %>
