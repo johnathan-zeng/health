@@ -8,7 +8,11 @@ Posts in Philadelphia were marked by the latitude, and posts in New York City we
 The overall posts are also sorted alphabetically by user for better organization.
 
 Gem: Devise
+
 Heroku Addon: PaperTrail
+
 Data Structures: users and posts are linked together. Users have email, password, and network of posts. Posts have disease, comments, latitude, longitude and belongs to a user.
+
 Validations: Posts must be a certain length, latitude, longitude must be filled in posts.
+
 Queries: Posts that have specific latitudes in posts will show as Philadelphia or New York.
