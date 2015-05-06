@@ -1,6 +1,14 @@
 The deployment location is: https://jzhq-cis196.herokuapp.com/users
 
-Each user is given the ability to login, but has the option to change information. The reason for this is because the 
+Each user is given the ability to login, but has the option to change information. The reason for this is because as information rapidly changes, users may need to update locations. This is in a way like wikipedia, where everything is sourced openly. THe user selection gives the freedom of to specify which user is relevant on the form.
 
 
-Nonetheless,
+Posts in Philadelphia were marked by the latitude, and posts in New York City were marked by latitude as well. In future iterations, more specific queries will be created.
+
+The overall posts are also sorted alphabetically by user for better organization.
+
+Gem: Devise
+Heroku Addon: PaperTrail
+Data Structures: users and posts are linked together. Users have email, password, and network of posts. Posts have disease, comments, latitude, longitude and belongs to a user.
+Validations: Posts must be a certain length, latitude, longitude must be filled in posts.
+Queries: Posts that have specific latitudes in posts will show as Philadelphia or New York.
