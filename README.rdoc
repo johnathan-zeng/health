@@ -1,8 +1,6 @@
-The three validations included were: uniqueness, length, and presence. These were all located in the posts page.
+The deployment location is: https://jzhq-cis196.herokuapp.com/users
 
-We added Papertrail as a Heroku add-on.
+Each user is given the ability to login, but has the option to change information. The reason for this is because the 
 
-For the queries, we created two queries: sorting descending by name, and displaying the most 3 recent posts Another two queries were created for a second list of posts: displaying posts with a latitude of 39.95 and hacing an offset.
 
-The deployment location for posts is: https://cis196-jz-hq.herokuapp.com/
-	
+Nonetheless,
